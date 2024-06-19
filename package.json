@@ -4,10 +4,15 @@
   "description": "Allows for easy webhook sending through discord's webhook API",
   "main": "./src/index.js",
   "exports": {
-    "import": "./src/index.mjs",
-    "require": "./src/index.js"
+    "import": {
+      "types": "./index.d.ts",
+      "default": "./src/index.mjs"
+    },
+    "require": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    }
   },
-  "typings": "index.d.ts",
   "scripts": {
     "test": "mocha --timeout 50000"
   },
